@@ -2,7 +2,7 @@
 import Divider from '@mui/material/Divider';
 import { ListComponent } from './shared/ListComponent';
 import { useState } from 'react';
-
+import { db } from "./Firebase/fireBaseConfig";
 
 export default function Home() {
   const [modalState, setModalState] = useState<boolean>(false)
@@ -14,8 +14,8 @@ export default function Home() {
             <p className='p-2 text-xl m-2'>Add Item</p>
             <Divider className='w-full bg-black' />
             <input placeholder='Item' className='w-full p-4 m-2' />
-            <div className='flex items-center justify-between w-full p-2'>
-              <input placeholder='No. of boxes' className='w-[40%] p-4 m-2' />
+            <div className='flex items-center justify-between w-full'>
+              <input placeholder='No. of boxes' className='w-[50%] p-4' />
               <button className='bg-black p-2 text-white rounded-md w-[30%]' onClick={() => setModalState(false)}> Add</button>
             </div>
           </div>
